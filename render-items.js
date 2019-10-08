@@ -15,7 +15,7 @@ const renderProducts = (product) => {
 
     const allTheDetails = document.createElement('details');
     const detailsContent = document.createElement('p');
-    allTheDetails.textContent = product.description;
+    detailsContent.textContent = product.description;
     allTheDetails.appendChild(detailsContent);
     li.appendChild(allTheDetails);
 
