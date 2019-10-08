@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
-import renderProducts from '../render-items.js';
+import renderProducts from '../products/render-items.js/index.js';
 const test = QUnit.test;
 
 test('should create dom element, product', function(assert) {
