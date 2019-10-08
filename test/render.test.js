@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
-import renderProducts from '../render-items/';
+import renderProducts from '../render-items.js';
 const test = QUnit.test;
 
 test('should create dom element, product', function(assert) {
@@ -18,7 +18,9 @@ test('should create dom element, product', function(assert) {
     const expected = '<li class="misc" title="What you get is out of our hands."><h3>Whatever!</h3><p class="price">$11.00</p></li>';
     //Assert
     const dom = renderProducts(miscFarmEquipment);
-    const html = String(dom);
+    console.log(dom);
+    const html = dom.outerHTML;
+    console.log(html);
     // Make assertions about what is expected valid result
     assert.equal(html, expected);
 });

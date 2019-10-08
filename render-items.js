@@ -26,8 +26,7 @@ const renderProducts = (product) => {
         alert('It\'s in the cart!');
     });
     li.appendChild(addButton);
-    
     return li;
 };
 
-export default renderProducts ;
+export default renderProducts;
