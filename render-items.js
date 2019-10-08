@@ -7,8 +7,12 @@ const renderProducts = (product) => {
     header3.textContent = product.name;
     li.appendChild(header3);
 
-    const USD = document.createElement('p');
-    USD.textContent = '$' + product.price.toFixed(2);
+    const p = document.createElement('p');
+    p.className = product.price;
+    const USD = '$' + product.price.toFixed(2);
+    p.textContent = USD;
+    
+    return li;
 };
 
 export default renderProducts ;
