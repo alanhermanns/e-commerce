@@ -46,7 +46,7 @@ test('shoud loop through an array until an id matches', function(assert) {
     // Call the function you're testing and set the result to a const
     const result = findById(cart, 'farm-equipment');
     //Assert
-    const theRightResult = 'farm-equipment';
+    const theRightResult = cart[1];
     // Make assertions about what is expected valid result
     assert.equal(result, theRightResult);
 });
