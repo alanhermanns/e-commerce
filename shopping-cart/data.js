@@ -1,18 +1,18 @@
 const cart = [{
     id : 'detector',
-    quantitiy : 3
+    quantity : 3
 }, {
     id : 'farm-equipment',
-    quantitiy : 2,
+    quantity : 2,
 }, {
     id : 'door-bell',
-    quantitiy : 4,
+    quantity : 4,
 }, {
     id : 'hound',
-    quantitiy : 6,
+    quantity : 6,
 }, {
     id : 'shirt',
-    quantitiy : '3'
+    quantity : '3'
 }];
 
 export default cart;
