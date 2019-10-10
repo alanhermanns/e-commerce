@@ -71,7 +71,7 @@ const renderProducts = (product) => {
         let json = localStorage.getItem('CART');
         let cart;
         if (json) {
-            JSON.parse(json);
+            cart = JSON.parse(json);
         }
         else {
             cart = [];
