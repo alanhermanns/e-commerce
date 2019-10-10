@@ -1,11 +1,46 @@
 import { findById } from '../common/utils.js';
-export let cart = [];
+
+// export const setCart = (cart) => localStorage.setItem(JSON.stringify('cart', cart));
+// export const getCart = () => JSON.parse(localStorage.getItem('cart'));
+
+// export const checkForCartAndIfNoCartMakeEmptyCart = () => {
+//     let json = localStorage.getItem('cart');
+//     if (json) {
+//        let cart = JSON.parse(json);
+//     }
+//     else {
+//         cart = [];
+//         setCart(cart);
+//     }
+// };
 
 
-export const setCart = () => localStorage.setItem(JSON.stringify('cart', cart));
+    // if (localStorage === Storage) {
+    //     let newProduct = {
+    //         id : id,
+    //         quantitiy : 1,
+    //     };
+    //     cart.push(newProduct);
+    //     setCart();
+    // } else return;
+    // return;
 
 
-export const getCart = () => JSON.parse(localStorage.getItem('cart'));
+// const incrementProduct = (product) => {
+//     cart = getCart();
+//     console.log(cart);
+//     let productToIncrement = findById(cart, product.id);
+//     if (!productToIncrement){
+//         productToIncrement = { id : product.id, quantitiy : 1, };
+//         cart.push(productToIncrement);
+//     }
+//     else {
+//         productToIncrement.quantity ++;
+//     }
+//     setCart(cart);
+
+// };
+
 
 const renderProducts = (product) => {
     const li = document.createElement('li');
@@ -30,23 +65,33 @@ const renderProducts = (product) => {
 
     const addButton = document.createElement('button');
     addButton.className = 'add';
+    addButton.value = product.id;
     addButton.textContent = 'Add to cart';
     addButton.addEventListener('click', () => {
-        let currentCart = getCart();
-        let productToIncrement = findById(product.id, currentCart);
-
-        if (productToIncrement) { 
-            productToIncrement.quantity ++;
+        let json = localStorage.getItem('CART');
+        let cart;
+        if (json) {
+            JSON.parse(json);
         }
         else {
-            let newProduct = {
+            cart = [];
+        }
+        
+        let lineItem = findById(cart, product.id);
+        
+        if (!lineItem){
+            lineItem = {
                 id : product.id,
-                quantitiy : 1,
+                quantity : 1,
             };
-            currentCart.push(newProduct);
-        }    
-        setCart(currentCart);
-        console.log(currentCart);
+            cart.push(lineItem);
+        }
+        else {
+            lineItem.quantity ++;
+        }
+        json = JSON.stringify(cart);
+        localStorage.setItem('CART', json);
+
     });
     li.appendChild(addButton);
     return li;
