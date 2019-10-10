@@ -21,8 +21,8 @@ const miscFarmEquipment = {
 };
 const doorBell = {
     id : 'door-bell',
-    name : 'ding',
-    description : 'Song of choice.',
+    name : 'Door Bell',
+    description : 'Song of choice. If you\'re thinking about it, maybe ring it!',
     category : 'home-improvement',
     price : 4.00,
 };

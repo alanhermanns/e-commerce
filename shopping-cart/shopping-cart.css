@@ -1,0 +1,25 @@
+/* .table {
+    display: flex;
+    flex-direction: column;
+    border : 2px dotted red;
+}
+
+.align-left {
+    border: 1px solid green;
+}
+*/
+.the-quantity {
+    display: flex;
+    justify-content: center;
+}
+/* 
+tfoot {
+    display: flex;
+    justify-content : space-between;
+}
+#order-total{
+    border: 1px solid green;
+}
+.line-item-total{
+    border: 1px solid green;
+}  */
