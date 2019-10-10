@@ -14,9 +14,8 @@ const renderTabeRow = (lineItem, product) => {
     tr.appendChild(priceCell);
 
     const quantityCell = document.createElement('td');
-    quantityCell.className = 'align-left';
+    quantityCell.className = 'the-quantity';
     quantityCell.textContent = lineItem.quantity;
-    console.log(lineItem.quantity);
     tr.appendChild(quantityCell);
 
     const totalCell = document.createElement('td');

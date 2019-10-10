@@ -17,7 +17,7 @@ test('should create dom element, product', function(assert) {
     };
     //Act 
     // Call the function you're testing and set the result to a const
-    const expected = '<li class="misc." title="What you get is out of our hands."><h3>Whatever!</h3><p class="11">$11.00</p><details><p>What you get is out of our hands.</p></details><button class=\"add\">Add to cart</button></li>';
+    const expected = '<li class="misc." title="What you get is out of our hands."><h3>Whatever!</h3><p class="11">$11.00</p><details><p>What you get is out of our hands.</p></details><button class="add" value="farm-equipment">Add to cart</button></li>';
     //Assert
     const dom = renderProducts(miscFarmEquipment);
     const html = dom.outerHTML;

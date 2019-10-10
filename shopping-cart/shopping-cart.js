@@ -1,5 +1,5 @@
 import products from '../products/data.js';
-import { findById, prettyNumber, calcLineTotal, findOrderTotal } from '../common/utils.js';
+import { findById, findOrderTotal } from '../common/utils.js';
 import renderTableRow from './render-table-row.js';
 
 const tableBody = document.querySelector('tbody');
