@@ -70,19 +70,19 @@ test('shoud loop through an array of lines and extract info to calculate total p
     // Set up your parameters and expectations
     const cart = [{
         id : 'detector',
-        quantitiy : 3 //$60
+        quantity : 3 //$60
     }, {
         id : 'farm-equipment',
-        quantitiy : 2, //$22
+        quantity : 2, //$22
     }, {
         id : 'door-bell',
-        quantitiy : 4, //$16
+        quantity : 4, //$16
     }, {
         id : 'hound',
-        quantitiy : 6, //$24
+        quantity : 6, //$24
     }, {
         id : 'shirt',
-        quantitiy : 3, //$33
+        quantity : 3, //$33
     }];
     const detector = {
         id : 'detector',

@@ -1,3 +1,12 @@
+import { findById } from '../common/utils.js';
+export let cart = [];
+
+
+export const setCart = () => localStorage.setItem(JSON.stringify('cart', cart));
+
+
+export const getCart = () => JSON.parse(localStorage.getItem('cart'));
+
 const renderProducts = (product) => {
     const li = document.createElement('li');
     li.className = product.category;
@@ -23,7 +32,21 @@ const renderProducts = (product) => {
     addButton.className = 'add';
     addButton.textContent = 'Add to cart';
     addButton.addEventListener('click', () => {
-        alert('It\'s in the cart!');
+        let currentCart = getCart();
+        let productToIncrement = findById(product.id, currentCart);
+
+        if (productToIncrement) { 
+            productToIncrement.quantity ++;
+        }
+        else {
+            let newProduct = {
+                id : product.id,
+                quantitiy : 1,
+            };
+            currentCart.push(newProduct);
+        }    
+        setCart(currentCart);
+        console.log(currentCart);
     });
     li.appendChild(addButton);
     return li;

@@ -12,7 +12,7 @@ const cart = [{
     quantity : 6,
 }, {
     id : 'shirt',
-    quantity : '3'
+    quantity : 3,
 }];
 
 export default cart;

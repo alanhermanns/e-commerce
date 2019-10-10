@@ -23,7 +23,7 @@ export const findOrderTotal = (cart, products) => {
     for (let i = 0; i < cart.length; i ++){
         const lineItem = cart[i];
         const product = findById(products, lineItem.id);
-        const lineTotal = calcLineTotal(lineItem.quantitiy, product.price);
+        const lineTotal = calcLineTotal(lineItem.quantity, product.price);
         orderTotal = orderTotal + lineTotal;
     }
     return prettyNumber(orderTotal);
