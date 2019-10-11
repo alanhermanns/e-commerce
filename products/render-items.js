@@ -51,6 +51,12 @@ const renderProducts = (product) => {
     header3.textContent = product.name;
     li.appendChild(header3);
 
+    const theImage = document.createElement('img');
+    theImage.src = '../common/assets/200.jpg';
+    theImage.alt = product.name;
+    li.appendChild(theImage);
+
+
     const p = document.createElement('p');
     p.className = product.price;
     const USD = '$' + product.price.toFixed(2);
