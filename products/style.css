@@ -1,0 +1,53 @@
+body {display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+
+nav {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: impact;
+}
+ul {
+    display: flex;
+}
+
+h1{
+    font-family: Impact, fantasy;
+}
+
+.add {
+    color: rebeccapurple;
+
+    background-color: lightpink;
+    transition: background-color 2.5s;
+    
+}
+
+button:hover {
+    background: red;
+}
+
+img {
+    border-radius: 15px;
+}
+
+details{
+    width: 175px;
+}
+button {
+    margin-top: 5px;
+}
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    height: 450px;
+    border: 5px solid red;
+    box-shadow: 10px 10px rgb(169, 127, 127);  
+    list-style: none;
+}

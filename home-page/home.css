@@ -1,0 +1,88 @@
+html, body{
+    height: 100%;
+}
+html {
+    background-image: url('./tessalation-wallpaper.jpg');
+    background-repeat: round;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background: black;
+}
+nav ul.home {
+    padding-left: 10px;
+    display : flex;
+    width: 80%;
+    justify-content: flex-start;
+}
+nav ul.other-stuff {
+    padding-right: 10px;
+    display : flex;
+    width: 20%;
+    justify-content: space-around;
+}
+nav li {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: white;
+    width: auto;
+    padding: 5px;
+    border-radius: 20%;
+
+}
+
+.title-section {
+    background: rgb(114, 21, 175); opacity:0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10px;
+    height: 30%;
+    border-radius: 3px;
+    
+}
+p {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 1px 1px black;
+
+}
+.main-section{
+    height: 100%;
+
+}
+.main-section-list{
+    height:50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-section-list li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 30%;
+    height: auto;
+    border-radius: 3px;
+}
+.item {
+    background: papayawhip;
+    color: black;
+    border: 2px solid black;
+    
+}
+.message{
+    color: red;
+    border: 2px solid white;
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
